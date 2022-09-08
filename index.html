@@ -1,0 +1,66 @@
+<html>
+  <head>
+    <title>DOM</title>
+    <script type = "application/javascript">
+    
+    function changeImage()
+    {
+      if(document.getElementById("im4").src == "/tmp/guest-lrqgos/Desktop")
+      {
+        document.getElementById("im4").src = "/tmp/guest-lrqgos/Desktop";
+      }
+      else
+      {
+        document.getElementById("im4").src = "/tmp/guest-lrqgos/Desktop";
+      }
+    }
+    
+    function coinflip()
+    {
+      (Math.floor(Math.random() *2) == 0) ? alert('It is Heads') : alert('It is Tails')
+    }
+    
+    function setBodyAttr(attr, value)
+    {
+      if(document.body)
+        eval('document.body.'+attr+'="'+value+'"');
+      else
+        notSupported();
+    }
+    
+    </script>
+  </head>
+  <body>
+    <center>
+      <button onclick="getElementById('demo').innerHTML=Date()"> What is the time? </button>
+      <p id = "demo"> </p>
+    </center>
+    
+    <center>
+      <img src="img1.png" id="im4" onclick="changeImage()"/>
+    </center>
+    
+    <font size = 20> Select Text Colour &nbsp; &nbsp; &nbsp; </font>
+    <select style="font-size:20px; width:120px; height:25px;" onChange="setBodyAttr('text'.this.options[this.selectedIndex].value);">
+      <option value="black">Black
+      <option value="red">Red
+      <option value="green">Green
+      <option value="purple">Purple
+      <option value="blue">Blue
+      <option value="brown">Brown
+    </select>
+    <br>
+    
+    <font size = 20> Select Background Colour &nbsp; &nbsp; &nbsp; </font>
+    <select style="font-size:20px; width:120px; height:25px;" onChange="setBodyAttr('bgColor'.this.options[this.selectedIndex].value);">
+      <option value="black">Black
+      <option value="red">Red
+      <option value="green">Green
+      <option value="purple">Purple
+      <option value="blue">Blue
+      <option value="brown">Brown
+    </select>
+    <br>
+    
+  </body>
+</html>
